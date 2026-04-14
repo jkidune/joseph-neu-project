@@ -1,7 +1,15 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(curl -s http://localhost:3000)",
+      "WebFetch(domain:shaders.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebSearch",
+      "Bash(claude mcp:*)",
+      "WebFetch(domain:shaders.paper.design)",
+      "WebFetch(domain:github.com)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d.get\\('exports',''\\) or d.get\\('main',''\\)\\)\")"
     ]
   }
 }
