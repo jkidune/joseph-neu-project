@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="w-full h-screen h-[100svh] bg-[#080807] flex flex-col justify-between overflow-hidden text-white p-6 md:p-8">
+    <main className="w-full min-h-[100svh] bg-[#080807] flex flex-col justify-between text-white p-4 md:p-6 lg:p-8 overflow-x-hidden">
       
       {/* NAVIGATION */}
       <header className="w-full shrink-0 z-10">

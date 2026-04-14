@@ -9,22 +9,24 @@ export const metadata = {
 
 export default function WorksPage() {
   return (
-    <main className="h-screen w-screen overflow-hidden bg-[#080807] flex flex-col">
-      <div className="flex flex-col h-full max-w-[1620px] mx-auto w-full px-6 py-6">
+    <main className="min-h-screen w-full bg-[#080807] flex flex-col overflow-x-hidden text-white">
+      <div className="flex flex-col h-full max-w-[1620px] mx-auto w-full px-4 md:px-6 py-6 border-transparent">
 
         {/* Navigation */}
-        <Navigation />
+        <header className="shrink-0 z-10 w-full mb-6">
+          <Navigation />
+        </header>
 
         {/* Page title */}
-        <div className="flex items-end justify-between mt-10 mb-6 shrink-0">
+        <div className="flex items-end justify-between mt-4 md:mt-10 mb-6 shrink-0 border-transparent">
           <h1
-            className="text-[56px] font-bold leading-none tracking-tight text-white"
+            className="text-[40px] md:text-[56px] font-bold leading-none tracking-tight text-white border-transparent"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
             WORKS
           </h1>
           <p
-            className="text-[13px] text-[#c5c2c2] uppercase"
+            className="text-[11px] md:text-[13px] text-[#c5c2c2] uppercase border-transparent"
             style={{ fontFamily: "var(--font-geist-mono)" }}
           >
             {projects.length} projects
@@ -32,8 +34,8 @@ export default function WorksPage() {
         </div>
 
         {/* Projects grid */}
-        <div className="flex-1 min-h-0 overflow-hidden">
-          <div className="grid grid-cols-2 gap-[1px] h-full border border-[rgba(148,148,148,0.2)]">
+        <div className="flex-1 w-full border-transparent">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] auto-rows-fr border-t border-l border-[rgba(148,148,148,0.2)]">
             {projects.map((project, i) => (
               <Link
                 key={project.slug}

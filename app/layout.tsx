@@ -39,9 +39,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${spaceMono.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${spaceMono.variable} ${geistMono.variable} min-h-screen antialiased`}
     >
-      <body className="h-full overflow-hidden bg-[#080807] text-white">
+      <body className="min-h-screen bg-[#080807] text-white">
         {children}
       </body>
     </html>
